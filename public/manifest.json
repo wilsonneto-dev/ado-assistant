@@ -10,6 +10,6 @@
     "128": "./icons/icon-128.png"
   },
   "manifest_version": 3,
-  "name": "Ez Snippets",
-  "version": "1.0.0"
+  "name": "ADO Assistant",
+  "version": "0.0.1"
 }
