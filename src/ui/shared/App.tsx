@@ -1,10 +1,10 @@
 import { ToastProvider } from "../toast/toast-provider.tsx"
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
-import snippetsRouter from "../snippets/snippets-router.tsx"
 import "../i18n.ts"
+import pbiAssistantRouter from "../pbi-assistant/pbi-assistant-router.tsx";
 
 const router = createBrowserRouter([
-  ...snippetsRouter
+  ...pbiAssistantRouter
 ]);
 
 console.log(location.href)
