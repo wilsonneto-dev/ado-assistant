@@ -1,0 +1,26 @@
+@import "theme-variables";
+
+@mixin form-field-default {
+  background-color: $form-input-background;
+  color: $color-main;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+}
+
+@mixin styled-scroll {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $card-background;
+    width: 4px;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 5px;
+    background-color: transparent;
+  }
+}
