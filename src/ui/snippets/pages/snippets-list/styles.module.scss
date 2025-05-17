@@ -1,5 +1,5 @@
-@import "src/shared/theme/theme-variables";
-@import "src/shared/theme/theme-mixins";
+@use "../../../shared/theme/theme-variables" as vars;
+@use "../../../shared/theme/theme-mixins" as mixins;
 
 .wrapper {
   display: flex;
@@ -17,7 +17,7 @@
     flex-direction: row;
 
     input {
-      @include form-field-default;
+      @include mixins.form-field-default;
       flex-grow: 1;
       height: 32px;
       border-radius: 10px;
@@ -29,24 +29,24 @@
     }
 
     .button {
-      @include form-field-default;
+      @include mixins.form-field-default;
       width: 56px;
       height: 32px;
       border-radius: 10px;
       font-size: 26px;
       font-weight: 100;
-      color: $color-light;
+      color: vars.$color-light;
       display: flex;
       align-items: center;
       justify-content: center;
       &:hover{
-        background-color: $form-input-background-light;
+        background-color: vars.$form-input-background-light;
       }
     }
   }
 
   .scroll {
-    @include styled-scroll;
+    @include mixins.styled-scroll;
     display: flex;
     flex-grow: 1;
     flex-direction: column;

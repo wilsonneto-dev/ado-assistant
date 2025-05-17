@@ -1,14 +1,14 @@
-@import 'theme-variables';
-@import 'theme-mixins';
+@use 'theme-variables' as vars;
+@use 'theme-mixins' as mixins;
 
 
 :root {
   font-family: 'Poppins', 'Montserrat', 'Open Sans', 'Roboto', 'Nunito', 'Lato', Arial, sans-serif;
-  background-color: $background;
+  background-color: vars.$background;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $color-main;
+  color: vars.$color-main;
 }
 
 #root {
@@ -19,7 +19,7 @@
 }
 
 body {
-  @include styled-scroll;
+  @include mixins.styled-scroll;
   margin: 0 auto;
   padding: 0;
   height: 100vh;

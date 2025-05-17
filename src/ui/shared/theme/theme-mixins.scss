@@ -1,8 +1,8 @@
-@import "theme-variables";
+@use "theme-variables" as vars;
 
 @mixin form-field-default {
-  background-color: $form-input-background;
-  color: $color-main;
+  background-color: vars.$form-input-background;
+  color: vars.$color-main;
   border: 0;
   outline: none;
   font-size: 14px;
@@ -14,7 +14,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $card-background;
+    background-color: vars.$card-background;
     width: 4px;
     border-radius: 5px;
   }

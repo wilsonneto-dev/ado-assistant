@@ -1,5 +1,5 @@
-@import "src/shared/theme/theme-variables";
-@import "src/shared/theme/theme-mixins";
+@use "../../theme/theme-variables" as vars;
+@use "../../theme/theme-mixins" as mixins;
 
 @mixin defaults {
   margin-bottom: 16px;
@@ -15,12 +15,12 @@
 .label {
   @include defaults;
   font-size: 24px;
-  color: $color-main;
+  color: vars.$color-main;
 }
 
 .input {
   @include defaults;
-  @include form-field-default;
+  @include mixins.form-field-default;
   height: 53px;
   box-sizing: border-box;
   border-radius: 16px;
@@ -29,9 +29,9 @@
 }
 
 .textarea {
-  @include styled-scroll;
+  @include mixins.styled-scroll;
   @include defaults;
-  @include form-field-default;
+  @include mixins.form-field-default;
   height: 53px;
   box-sizing: border-box;
   border-radius: 16px;
@@ -57,13 +57,13 @@
   gap: 8px;
 
   .button {
-    @include form-field-default;
+    @include mixins.form-field-default;
     width: 56px;
     height: 32px;
     border-radius: 10px;
     font-size: 26px;
     font-weight: 100;
-    color: $color-light;
+    color: vars.$color-light;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,16 +74,15 @@
     }
 
     &.ok {
-      background-color: $color-success;
+      background-color: vars.$color-success;
     }
 
     &.cancel {
-      background-color: $color-no-success;
+      background-color: vars.$color-no-success;
     }
 
     svg {
-      color: $color-main;
+      color: vars.$color-main;
     }
   }
-
 }
