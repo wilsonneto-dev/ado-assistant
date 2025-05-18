@@ -21,7 +21,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         background: resolve(__dirname, 'src/core/background.ts'),
-        contentScript: resolve(__dirname, 'src/core/contentScript.ts')
+        contentScript: resolve(__dirname, 'src/ui/in-content/contentScript.ts')
       },
       output: {
         entryFileNames: (chunkInfo) => {
